@@ -12,7 +12,7 @@ startBtn.addEventListener("click", () => {
   const about_turn = document.querySelector(".about-turn");
   let guess_number = document.querySelector(".guessNumber");
   const guess_btn = document.querySelector(".guess-btn");
-  const GeneratedNumber = Math.floor(Math.random() * (10 - 1)) + 1;
+  const GeneratedNumber = Math.floor(Math.random() * (15 - 1)) + 1;
   const winner_box = document.querySelector(".winner");
   let winner_text = document.querySelector(".winner-text");
   let looser_box = document.querySelector(".looser");
@@ -28,7 +28,7 @@ console.log(GeneratedNumber)
          
         if(guess_number.value > 0){
             
-            if(chance <= 5){
+            if(chance <= 3){
 
                 if(parseInt(guess_number.value) == GeneratedNumber)
                 {
@@ -41,11 +41,11 @@ console.log(GeneratedNumber)
                     if(gap <= 3)
                     {
                         hint_text.textContent = `Your guess, ${parseInt(guess_number.value)}, is too close`;
-                        about_turn.textContent =  `You have ${5-chance} turns left.`
+                        about_turn.textContent =  `You have ${3-chance} turns left.`
                         chance++;
                     }else{
                         hint_text.textContent = `Your guess, ${parseInt(guess_number.value)}, is too high`;
-                        about_turn.textContent =  `You have ${5-chance} turns left.`
+                        about_turn.textContent =  `You have ${3-chance} turns left.`
                         chance++;
                     }
                 }else{
@@ -53,12 +53,12 @@ console.log(GeneratedNumber)
                     if(gap <= 3)
                     {
                         hint_text.textContent = `Your guess, ${parseInt(guess_number.value)}, is too close`;
-                        about_turn.textContent =  `You have ${5-chance} turns left.`
+                        about_turn.textContent =  `You have ${3-chance} turns left.`
                         chance++;
                     }
                     else{
                         hint_text.textContent = `Your guess, ${parseInt(guess_number.value)}, is too high`;
-                        about_turn.textContent =  `You have ${5-chance} turns left.`
+                        about_turn.textContent =  `You have ${3-chance} turns left.`
                         chance++;
                     }
                 }
